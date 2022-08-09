@@ -22,5 +22,10 @@ public class Framework {
 		driver.get("https://techfios.com/billing/?ng=admin/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+	
+	public void tearDown() {
+		driver.close();
+		driver.quit();
+	}
 
 }
